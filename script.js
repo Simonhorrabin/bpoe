@@ -10,7 +10,9 @@ function generatePassword() {
 
     // 1. Prompt the user for the password criteria
    numberOfCharacters = prompt("How many charachters do you want in your Password? Choose between 8-128 charachters") 
-  
+   if (numberOfCharacters < 8 || numberOfCharacters > 128) {
+    return "Choose the correct number of characters"
+   }
     
 
     return "Generated password will go here!"
@@ -26,3 +28,12 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+// 
+const button = document.getElementById("myButton");
+
+button.addEventListener("click", function() {
+  // Code to execute when the button is clicked
+});
+console.log("button clicked!")
